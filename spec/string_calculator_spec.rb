@@ -16,5 +16,10 @@ describe StringCalculator do
     it 'allows adding two numbers' do
       calc.add("1,2").should eq(3)
     end
+
+    it 'allows adding arbitrary number of arguments' do
+      calc.add("1,4,5,2").should eq(12)
+      calc.add("1,2,7").should eq(10)
+    end
   end
 end
