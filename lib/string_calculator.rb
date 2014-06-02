@@ -1,5 +1,5 @@
 class StringCalculator
-  def add(expression = "")
-    return 0 if expression.empty?
+  def add(expression)
+    expression.to_i
   end
 end
