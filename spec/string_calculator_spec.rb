@@ -21,5 +21,10 @@ describe StringCalculator do
       calc.add("1,4,5,2").should eq(12)
       calc.add("1,2,7").should eq(10)
     end
+
+    it 'allows linebreaks as a delimeter' do
+      calc.add("1\n2").should eq(3)
+      calc.add("1,2\n3").should eq(6)
+    end
   end
 end
