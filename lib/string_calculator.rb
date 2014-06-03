@@ -1,10 +1,11 @@
 class StringCalculator
   def add(expression)
-    splitted_to_parts(expression).reduce(&:+).to_i
+    extract_numbers(expression).reduce(&:+).to_i
   end
 
   private
-  def splitted_to_parts(expression)
+
+  def extract_numbers(expression)
     expression.split(',').map(&:to_i)
   end
 end
