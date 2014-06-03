@@ -5,7 +5,6 @@ class StringCalculator
 
   private
   def splitted_to_parts(expression)
-    first, second = expression.split(',')
-    [first, second].compact.map(&:to_i)
+    expression.split(',').map(&:to_i)
   end
 end
