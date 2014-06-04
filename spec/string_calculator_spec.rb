@@ -26,5 +26,13 @@ describe StringCalculator do
       calc.add("1\n2").should eq(3)
       calc.add("1,2\n3").should eq(6)
     end
+
+    it 'allows (optionally) to chose arbitrary chosen delimiter' do
+      calc.add("//\n
+                1
+                2").should eq(3)
+      calc.add("//;
+                1;2;3;4").should eq(10)
+    end
   end
 end

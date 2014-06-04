@@ -6,6 +6,10 @@ class StringCalculator
   private
 
   def extract_numbers(expression)
-    expression.split(',').map(&:to_i)
+    expression.split(allowed_delimiters).map(&:to_i)
+  end
+
+  def allowed_delimiters
+    %r{,|\n}
   end
 end
