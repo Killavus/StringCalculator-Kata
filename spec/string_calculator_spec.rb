@@ -34,5 +34,9 @@ describe StringCalculator do
       calc.add("//;
                 1;2;3;4").should eq(10)
     end
+
+    it 'throws exception on negative numbers' do
+      calc.add("-1000").should raise_error 'negatives not allowed -1000'
+    end
   end
 end
